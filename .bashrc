@@ -4,6 +4,7 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
+
 [ -z "$PS1" ] && return
 
 
@@ -184,31 +185,3 @@ dirsize () {
     rm -rf /tmp/list
 }
 
-
-# MacPorts Installer addition on 2011-10-02_at_21:17:16: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-export PATH=/usr/local/mysql/bin:$PATH
-
-
-# MacPorts Installer addition on 2011-10-02_at_21:17:16: adding an appropriate MANPATH variable for use with MacPorts.
-export MANPATH=/opt/local/share/man:$MANPATH
-# Finished adapting your MANPATH environment variable for use with MacPorts.
-
-
-# Setting PATH for EPD_free-7.3-2
-# The orginal version is saved in .profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-export PATH
-
-# Setting PATH for EPD-7.3-2
-# The orginal version is saved in .profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-export PATH
-
-MKL_NUM_THREADS=1
-export MKL_NUM_THREADS
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
