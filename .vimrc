@@ -38,6 +38,8 @@ colorscheme solarized
 " the plugins.
 let mapleader=","
 
+" use jk to escape insert mode
+inoremap jk <ESC>
 
 " ================ Turn Off Swap Files ==============
 
@@ -68,6 +70,11 @@ set linebreak    "Wrap lines at convenient points
 set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
+
+" disable folding when editing markdown
+" using following plugin: https://github.com/plasticboy/vim-markdown
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_initial_foldlevel=1
 
 " ================ Completion =======================
 
