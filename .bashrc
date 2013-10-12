@@ -134,12 +134,6 @@ alias nmr='ssh -X mhollen@entry.nmr.mgh.harvard.edu'
 alias nx='ssh -L5022:cobham:22 -l mhollen door.nmr.mgh.harvard.edu'
 alias vnc='ssh -L5901:cobham:5901 -l mhollen door.nmr.mgh.harvard.edu'
 
-# syncstrength directory
-alias ss='cd ~/Dropbox/SyncStrength/html/ss-app-dev/'
-
-# development virtual environment (vagrant w/ docker)
-alias devenv='cd ~/Dropbox/projects/docker;vagrant up; vagrant ssh'
-
 function cd () {
     pushd "$1" > /dev/null
 }
