@@ -38,10 +38,10 @@ set background=dark
 colorscheme solarized
 
 " Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
+" That means all \x commands turn into ;x
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
-let mapleader=","
+let mapleader=";"
 
 " use jk to escape insert mode
 inoremap jk <ESC>
@@ -148,3 +148,5 @@ nnoremap <leader>n :NERDTreeClose<cr>:NERDTreeToggle<cr>
 nnoremap <leader>m :NERDTreeClose<cr>:NERDTreeFind<cr>
 nnoremap <leader>N :NERDTreeClose<cr>
 
+nnoremap <leader>j :bn<cr>
+nnoremap <leader>k :bp<cr>

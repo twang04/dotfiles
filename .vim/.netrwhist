@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/mark/Downloads/solarized/osx-terminal.app-colors-solarized'
-let g:netrw_dirhist_2='/Users/mark/Dropbox/projects/syncstrength/vagrant-postgresql/cookbooks/postgresql'
-let g:netrw_dirhist_3='/Users/mark/Dropbox/syncstrength/html/ss-app-dev/frontend/manage'
