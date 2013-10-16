@@ -9,7 +9,8 @@ execute pathogen#infect()
 
 " ================ General Config ====================
 
-set number                      "Line numbers are good
+"set number                      "Line numbers are good
+set relativenumber              "Shows line number away from current pos
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
@@ -17,8 +18,12 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set hlsearch                    "Highlight search terms
+set incsearch                   "show search matches as you type
+set showmatch                   "show matches
 
 let &t_Co=256
+
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -52,9 +57,9 @@ set nowb
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set expandtab
 
 filetype plugin on
@@ -64,6 +69,7 @@ filetype indent on
 set list listchars=tab:\ \ ,trail:·
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
+set colorcolumn=85
 
 " ================ Folds ============================
 
@@ -87,7 +93,6 @@ set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 
 
-
 " ================ Scrolling ========================
 
 set scrolloff=8 "Start scrolling when we're 8 lines away from margins
@@ -100,6 +105,7 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
 "Remember info about open buffers on close
 set viminfo^=%
 
@@ -110,15 +116,35 @@ set viminfo^=%
 "" Remap VIM 0 to first non-blank character
 map 0 ^
 
-"Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+" Complete whole filenames/lines with a quicker shortcut key in insert mode
+inoremap <C-f> <C-x><C-f>
+inoremap <C-l> <C-x><C-l>
 
-if has("mac") || has("macunix")
-    nmap <D-j> <M-j>
-    nmap <D-k> <M-k>
-    vmap <D-j> <M-j>
-    vmap <D-k> <M-k>
-endif
+" Use ,d (or ,dd or ,dj or 20,dd) to delete a line without adding it to the
+" yanked stack (also, in visual mode)
+nnoremap <silent> <leader>d "_d
+vnoremap <silent> <leader>d "_d
+
+" Yank/paste to the OS clipboard with ,y and ,p
+nnoremap <leader>y "+y
+nnoremap <leader>Y "+yy
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+
+" sane regex
+nnoremap / /\v
+vnoremap / /\v
+
+" clear search with ,<space>
+nnoremap <leader><space> :noh<cr>
+
+" match bracket pairs
+nnoremap <tab> %
+vnoremap <tab> %
+
+" NERDTree Settings
+
+nnoremap <leader>n :NERDTreeClose<cr>:NERDTreeToggle<cr>
+nnoremap <leader>m :NERDTreeClose<cr>:NERDTreeFind<cr>
+nnoremap <leader>N :NERDTreeClose<cr>
+
