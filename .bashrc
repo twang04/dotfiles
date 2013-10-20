@@ -7,6 +7,10 @@ fi
 
 [ -z "$PS1" ] && return
 
+# replace plain shell with tmux session
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi
 
 ###############################################
 ### Making the prompt as pretty as possible ###
@@ -89,12 +93,12 @@ On_IWhite='\e[0;107m'   # White
 
 # define prompt
 
-if [ "$EUID" = "0" ] ; then
-    PS1='\h:\W# '
-else
-    # <red>[</red><white>TIME host:dir</white><red>]</red>
-    PS1="\[${IWhite}\][\[${White}\]\A \[${IWhite}\]\h\[${White}\]:\[${IRed}\]\W\[${IWhite}\]]\[${Color_Off}\] "
-fi
+#if [ "$EUID" = "0" ] ; then
+#    PS1='\h:\W# '
+#else
+# <red>[</red><white>TIME host:dir</white><red>]</red>
+PS1="\[${IWhite}\][\[${White}\]\A \[${IWhite}\]\h\[${White}\]:\[${IRed}\]\W\[${IWhite}\]]\[${Color_Off}\] "
+#fi
 
 
 
@@ -182,3 +186,4 @@ dirsize () {
     rm -rf /tmp/list
 }
 
+source /usr/local/bin/virtualenvwrapper.sh
