@@ -7,15 +7,11 @@ fi
 
 [ -z "$PS1" ] && return
 
-# replace plain shell with tmux session
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
 
 ###############################################
 ### Making the prompt as pretty as possible ###
 
-# TERM=xterm-256colour
+#export TERM=screen-256color
 
 # Reset
 Color_Off='\e[0m'       # Text Reset
@@ -187,3 +183,9 @@ dirsize () {
 }
 
 source /usr/local/bin/virtualenvwrapper.sh
+
+# replace plain shell with tmux session
+if [[ ! $TERM =~ screen ]]; then
+    #exec tmux -2
+    TERM=screen-256color; tmux -2
+fi
