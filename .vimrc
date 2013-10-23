@@ -43,8 +43,8 @@ colorscheme solarized
 " the plugins.
 let mapleader=";"
 
-" use jk to escape insert mode
-inoremap jk <ESC>
+" use jj to escape insert mode
+inoremap jj <ESC>
 
 " ================ Turn Off Swap Files ==============
 
@@ -68,8 +68,8 @@ filetype indent on
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 set nowrap       "Don't wrap lines
-set linebreak    "Wrap lines at convenient points
-set colorcolumn=85
+"set linebreak    "Wrap lines at convenient points
+set colorcolumn=90
 
 " ================ Folds ============================
 
@@ -150,3 +150,31 @@ nnoremap <leader>N :NERDTreeClose<cr>
 
 nnoremap <leader>j :bn<cr>
 nnoremap <leader>k :bp<cr>
+
+
+" SMOOTH SCROLLING
+set scroll=10
+function SmoothScroll(up)
+    if a:up
+        let scrollaction=""
+    else
+        let scrollaction=""
+    endif
+    exec "normal " . scrollaction
+    redraw
+    let counter=1
+    while counter<&scroll
+        let counter+=1
+        sleep 10m
+        redraw
+        exec "normal " . scrollaction
+    endwhile
+endfunction
+
+nnoremap <C-U> :call SmoothScroll(1)<Enter>
+nnoremap <C-D> :call SmoothScroll(0)<Enter>
+inoremap <C-U> <Esc>:call SmoothScroll(1)<Enter>i
+inoremap <C-D> <Esc>:call SmoothScroll(0)<Enter>i
+
+
+" THE END
