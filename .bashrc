@@ -11,7 +11,7 @@ fi
 ###############################################
 ### Making the prompt as pretty as possible ###
 
-#export TERM=screen-256color
+export TERM=xterm-256color
 
 # Reset
 Color_Off='\e[0m'       # Text Reset
@@ -186,6 +186,11 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # replace plain shell with tmux session
 if [[ ! $TERM =~ screen ]]; then
-    #exec tmux -2
-    TERM=screen-256color; tmux -2
+    TERM=screen-256color;
+    sessions=$(tmux list-sessions 2> /dev/null);
+    if [[ "$sessions" == "" ]]; then
+        tmux new -s dev;
+    else
+        tmux attach;
+    fi
 fi
