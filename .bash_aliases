@@ -8,10 +8,11 @@ alias su='su - '
 alias resource='source ~/.bashrc'
 alias ll='ls -alF --color'
 alias ltr='ll -tr'
-alias tmux='tmux attach'
+alias tmux='TERM=screen-256color-bce tmux -2'
 
 # handy
 alias bigfiles='du -ks ./ | sort -n -r | head -n 10'
 
-
-
+# findcmd blah
+# will find all executables in PATH that match 'blah'
+alias findcmd='compgen -ac | grep '

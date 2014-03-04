@@ -8,7 +8,7 @@
 export TERM=xterm-256color
 
 if [ -r ~/.bash_prompt ]; then
-    . ~/.bash_prompt
+    source ~/.bash_prompt
 fi
 
 ######################
@@ -33,7 +33,7 @@ stty -echoctl
 ######################
 
 if [ -r ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    source ~/.bash_aliases
 fi
 
 

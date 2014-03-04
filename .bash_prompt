@@ -76,5 +76,5 @@ On_IWhite='\e[0;107m'   # White
 # define prompt
 
 # <red>[</red><white>TIME host:dir</white><red>]</red>
-PS1="\[${IWhite}\][\[${White}\]\A \[${IWhite}\]\h\[${White}\]:\[${IRed}\]\W\[${IWhite}\]]\[${Color_Off}\] "
+PS1="\[${IWhite}\][\[${White}\]\u@\[${IWhite}\]\h\[${White}\]:\[${IRed}\]\W\[${IWhite}\]]\[${Color_Off}\] "
 
