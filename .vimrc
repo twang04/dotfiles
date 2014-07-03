@@ -16,11 +16,12 @@ set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
+"set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set hlsearch                    "Highlight search terms
 set incsearch                   "show search matches as you type
 set showmatch                   "show matches
+set title                       "shows title in gnome/tab
 
 let &t_Co=256
 
@@ -35,7 +36,8 @@ syntax on
 
 " Color theme
 set background=dark
-colorscheme solarized
+set term=screen-256color
+colorscheme molokai
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ;x
@@ -44,7 +46,7 @@ colorscheme solarized
 let mapleader=";"
 
 " use jj to escape insert mode
-inoremap jj <ESC>
+inoremap jk <ESC>
 
 " ================ Turn Off Swap Files ==============
 
@@ -69,7 +71,7 @@ filetype indent on
 set list listchars=tab:\ \ ,trail:·
 set nowrap       "Don't wrap lines
 "set linebreak    "Wrap lines at convenient points
-set colorcolumn=90
+"set colorcolumn=90
 
 " ================ Folds ============================
 
