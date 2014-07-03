@@ -25,6 +25,9 @@ shopt -s cdspell
 # save multiline commands as a single entry
 shopt -s cmdhist
 
+# use vi keybindings
+set -o vi
+
 # do NOT print ^C when hitting ctrl-c
 stty -echoctl
 
