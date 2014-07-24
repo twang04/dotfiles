@@ -6,6 +6,8 @@
 ### Making the prompt as pretty as possible ###
 
 export TERM=xterm-256color
+export EDITOR=vim
+export VISUAL=vim
 
 if [ -r ~/.bash_prompt ]; then
     source ~/.bash_prompt
