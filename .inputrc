@@ -3,8 +3,13 @@ $if mode=vi
     set keymap vi-command
     "gg": beginning-of-history
     "G": end-of-history
+    ".": insert-last-argument
     set keymap vi-insert
     "jk": vi-movement-mode
     "\C-w": backward-kill-word
     "\C-p": history-search-backward
+    "\C-a": beginning-of-line
+    "\C-e": end-of-line
+    "\e.":yank-last-arg
+    "\e_":yank-last-arg
 $endif
