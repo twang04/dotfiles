@@ -11,5 +11,5 @@
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "/Users/mark/.vim/bundle/vim-airline"]
-	path = /Users/mark/.vim/bundle/vim-airline
+	path = .vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
