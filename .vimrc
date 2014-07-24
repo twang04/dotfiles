@@ -32,12 +32,19 @@ let &t_Co=256
 set hidden
 
 "turn on syntax highlighting
-syntax on
+syntax enable
 
 " Color theme
 set background=dark
 set term=screen-256color
 colorscheme molokai
+"colorscheme solarized
+
+" Airline
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ;x
@@ -152,6 +159,9 @@ nnoremap <leader>N :NERDTreeClose<cr>
 
 nnoremap <leader>j :bn<cr>
 nnoremap <leader>k :bp<cr>
+
+" Vimroom shortcut
+nnoremap <leader>vm :VimroomToggle<cr>
 
 
 " SMOOTH SCROLLING
