@@ -10,6 +10,9 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "/Users/mark/.vim/bundle/vim-airline"]
+[submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule ".vim/bundle/nimrod"]
+	path = .vim/bundle/nimrod.vim
+	url = https://github.com/zah/nimrod.vim.git
