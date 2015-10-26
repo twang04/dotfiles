@@ -10,13 +10,9 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline.git
 [submodule ".vim/bundle/nimrod"]
 	path = .vim/bundle/nimrod
 	url = https://github.com/zah/nimrod.vim.git
-
 [submodule ".vim/bundle/julia-vim"]
 	path = .vim/bundle/julia-vim
 	url = http://github.com/JuliaLang/julia-vim.git

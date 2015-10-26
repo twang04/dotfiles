@@ -42,9 +42,9 @@ colorscheme molokai
 
 " Airline
 set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ;x
