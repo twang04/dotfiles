@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/julia-vim"]
 	path = .vim/bundle/julia-vim
 	url = http://github.com/JuliaLang/julia-vim.git
+[submodule ".vim/bundle/lightline.vim"]
+	path = .vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
